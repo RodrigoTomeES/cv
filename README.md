@@ -100,5 +100,14 @@ pnpm dev
 
 [MIT](LICENSE.txt) - Creado por [**midudev**](https://midu.dev).
 
+## TODO
 
-
+- [ ] Añadir i18n
+- [ ] Añadir más skills
+- [ ] Añadir soporte para modo oscuro
+- [ ] Actualizar README
+- [ ] Comprobar rendimiento
+- [ ] Añadir astro-rename
+- [ ] Accesibilidad
+- [ ] 404
+- [ ] Añadir esLint, Prettier, Husky, Lint-staged, Commitlint

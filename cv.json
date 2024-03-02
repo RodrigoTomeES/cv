@@ -1,112 +1,74 @@
 {
   "basics": {
-    "name": "Miguel Ángel Durán",
-    "label": "Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación",
+    "name": "Rodrigo Tomé Nieto",
+    "label": "Front End Lead con más de 4 años de experiencia enfocado al rendimiento y la calidad del código.",
     "image": "/me.webp",
-    "email": "miduga@gmail.com",
-    "phone": "+34 688888888",
-    "url": "https://midu.dev",
-    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.",
+    "email": "hi@rodrigotome.es",
+    "phone": "",
+    "url": "https://rodrigotome.es",
+    "summary": "Con más de 4 años de experiencia profesional y una amplia trayectoria en el desarrollo web, me destaco por mi constante actualización en las últimas tendencias tecnológicas. Apasionado por la tecnología, disfruto explorando nuevas herramientas emergentes. Mi expertise incluye Next.js, Storybook, Typescript y Tailwind. Como líder de equipo, fomento el desarrollo individual para alcanzar el máximo rendimiento colectivo.",
     "location": {
       "address": "",
-      "postalCode": "08820",
-      "city": "el Prat de Llobregat",
+      "postalCode": "",
+      "city": "Logroño",
       "countryCode": "ES",
       "region": "España"
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "midudev",
-        "url": "https://linkedin.com/in/midudev"
+        "username": "rodrigotomees",
+        "url": "https://linkedin.com/in/rodrigotomees"
       },
       {
         "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
+        "username": "rodrigotomees",
+        "url": "https://x.com/rodrigotomees"
       },
       {
         "network": "GitHub",
-        "username": "midudev",
-        "url": "https://github.com/midudev"
+        "username": "rodrigotomees",
+        "url": "https://github.com/rodrigotomees"
       }
     ]
   },
   "work": [
     {
-      "name": "midudev",
-      "position": "Divulgador sobre Programación Web",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
+      "name": "Globant Create",
+      "position": "Front End Lead",
+      "url": "https://www.globant.com/studio/create",
+      "startDate": "2022-09-01",
       "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "summary": "En mi rol, lidero equipos, establezco estándares de código y mejoro la experiencia de desarrollo. Desarrollo partes críticas en proyectos, brindo apoyo donde se necesita y fomento el desarrollo del potencial de otros desarrolladores.",
       "highlights": [
-        "Started the company"
+        "Fui promocionado a Front End Lead"
       ]
     },
     {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
+      "name": "Globant Create",
+      "position": "Web Developer",
+      "url": "https://www.globant.com/studio/create",
+      "startDate": "2019-09-01",
       "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "summary": "En mis inicios en la empresa, me desempeñé en el desarrollo con Wordpress, PHP y SASS. A lo largo del tiempo, participé en proyectos de creciente relevancia y brindé apoyo en diversas iniciativas. Progresivamente, lideré la modernización del stack hacia Next.js, React y TypeScript, especializándome en estas tecnologías.",
       "highlights": [
-        "Started the company"
-      ]
-    },
-    {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
-      "highlights": [
-        "Started the company"
+        "Empece en la compañia"
       ]
     }
   ],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
   "education": [{
-    "institution": "Universitat Oberta de Catalunya",
-    "url": "https://www.uoc.edu/portal/es/index.html",
-    "area": "Ingeniero de Software",
+    "institution": "Universidad de La Rioja",
+    "url": "https://www.unirioja.es/",
+    "area": "Grado en Ingeniería Informática con perfil en Ingeniería del Software y en Gestión del Conocimiento.",
     "studyType": "Bachelor",
-    "startDate": "2003-01-01",
-    "endDate": "2009-01-01",
-    "score": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
+    "startDate": "2016-01-01",
+    "endDate": "2020-01-01"
   }],
   "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
+    "name": "React - The Complete Guide",
+    "date": "2020-10-01",
+    "issuer": "Udemy",
+    "url": "http://ude.my/UC-929881bb-bd97-493e-9e4d-3ad6143f65af"
   }],
   "skills": [
     {
@@ -146,14 +108,14 @@
     },
     {
       "name": "Node",
-      "level": "Avanzado",
+      "level": "Medio",
       "keywords": [
         "Desarrollo Web", "Backend", "JavaScript", "Servidor"
       ]
     },
     {
       "name": "MySQL",
-      "level": "Avanzado",
+      "level": "Medio",
       "keywords": [
         "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
       ]
@@ -189,87 +151,82 @@
   ],
   "languages": [
     {
-      "language": "Spanish",
-      "fluency": "Native speaker"
+      "language": "Español",
+      "fluency": "Nativo"
     },
     {
-      "language": "English",
-      "fluency": "Advanced"
+      "language": "Inglés",
+      "fluency": "Medio"
     }
   ],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
   "projects": [
     {
-      "name": "mars.codes",
+      "name": "GOG Regional Price",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
+      "description": "Compara los precios de los videojuegos en GOG entre diferentes regiones",
       "highlights": [
-        "Elige tu propia aventura",
-        "En desarrollo"
+        "Ahorra dinero",
+        "Svelte",
+        "Serverless"
       ],
-      "url": "https://mars.codes"
+      "url": "https://gog.rodrigotome.es",
+      "github": "https://github.com/RodrigoTomeES/gog-regions-prices"
     },
     {
-      "name": "AdventJS",
+      "name": "Astro Rename",
       "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
+      "description": "Minimiza el tamaño de las clases TailwindCSS y reduce hasta un 50% el HTML",
       "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
+        "Astro",
+        "TailwindCSS",
+        "Plugin"
       ],
-      "url": "https://adventjs.dev"
+      "url": "https://www.npmjs.com/package/astro-rename",
+      "github": "https://github.com/RodrigoTomeES/astro-rename"
     },
     {
-      "name": "Codember",
+      "name": "Giveaway Alert Bot",
       "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
+      "description": "Bot de Telegram que avisa de los giveaways que se realizan en diferentes plataformas",
       "highlights": [
-        "+2000 usuarios activos",
-        "Retos para cualquier lenguaje"
+        "Juegos gratis",
+        "Telegram Bot",
+        "Docker"
       ],
-      "url": "https://codember.dev"
+      "github": "https://github.com/RodrigoTomeES/giveaway-alert-bot"
     },
     {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
+      "name": "Bookmarks to Notion",
+      "isActive": false,
+      "description": "Convierte los marcadores de Firefox en una base de datos de Notion",
       "highlights": [
-        "100k visitas al mes",
-        "Desarrollado por la comunidad"
+        "Notion",
+        "Firefox",
+        "CSV"
       ],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
+      "url": "https://rodrigotomees.github.io/html-bookmark-to-csv/",
+      "github": "https://github.com/RodrigoTomeES/html-bookmark-to-csv"
     },
     {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
+      "name": "EML to HTML",
+      "description": "Extrae el contenido de los correos electrónicos en formato EML y los convierte en HTML",
       "highlights": [
-        "100% gratuito",
-        "+500 soluciones de la comunidad"
+        "Node.js",
+        "EML"
       ],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
+      "github": "https://github.com/RodrigoTomeES/eml_to_html"
     },
     {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
+      "name": "AWA DB",
+      "isActive": false,
+      "description": "Base de datos de Alienware Arena (AWA) con información de los items que se venden en el marketplace",
       "highlights": [
-        "+15k tickets repartidos",
-        "+50k espectadores en directo"
+        "Astro",
+        "TailwindCSS",
+        "DB"
       ],
-      "url": "https://miduconf.com"
+      "url": "https://https://awadb.rodrigotome.es/",
+      "github": "https://github.com/RodrigoTomeES/awa-db"
     }
   ]
 }
