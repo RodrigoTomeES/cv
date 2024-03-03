@@ -1,10 +1,11 @@
 ---
-import Section from "../Section.astro"
+import type { CollectionEntry } from 'astro:content';
 
-import { basics } from "@cv"
-const { summary } = basics
+type Props = {
+  summary: CollectionEntry<'cv'>['data']['basics']['summary']
+}
+
+const { summary } = Astro.props
 ---
 
-<Section title="Sobre mí">
-  <p>{summary}</p>
-</Section>
+<p>{summary}</p>

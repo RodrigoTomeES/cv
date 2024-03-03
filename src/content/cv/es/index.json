@@ -40,9 +40,7 @@
       "startDate": "2022-09-01",
       "endDate": null,
       "summary": "En mi rol, lidero equipos, establezco estándares de código y mejoro la experiencia de desarrollo. Desarrollo partes críticas en proyectos, brindo apoyo donde se necesita y fomento el desarrollo del potencial de otros desarrolladores.",
-      "highlights": [
-        "Fui promocionado a Front End Lead"
-      ]
+      "highlights": ["Fui promocionado a Front End Lead"]
     },
     {
       "name": "Globant Create",
@@ -51,102 +49,108 @@
       "startDate": "2019-09-01",
       "endDate": "2022-09-01",
       "summary": "En mis inicios en la empresa, me desempeñé en el desarrollo con Wordpress, PHP y SASS. A lo largo del tiempo, participé en proyectos de creciente relevancia y brindé apoyo en diversas iniciativas. Progresivamente, lideré la modernización del stack hacia Next.js, React y TypeScript, especializándome en estas tecnologías.",
-      "highlights": [
-        "Empece en la compañia"
-      ]
+      "highlights": ["Empece en la compañia"]
     }
   ],
-  "education": [{
-    "institution": "Universidad de La Rioja",
-    "url": "https://www.unirioja.es/",
-    "area": "Grado en Ingeniería Informática con perfil en Ingeniería del Software y en Gestión del Conocimiento.",
-    "studyType": "Bachelor",
-    "startDate": "2016-01-01",
-    "endDate": "2020-01-01"
-  }],
-  "certificates": [{
-    "name": "React - The Complete Guide",
-    "date": "2020-10-01",
-    "issuer": "Udemy",
-    "url": "http://ude.my/UC-929881bb-bd97-493e-9e4d-3ad6143f65af"
-  }],
+  "education": [
+    {
+      "institution": "Universidad de La Rioja",
+      "url": "https://www.unirioja.es/",
+      "area": "Grado en Ingeniería Informática con perfil en Ingeniería del Software y en Gestión del Conocimiento.",
+      "studyType": "Bachelor",
+      "startDate": "2016-01-01",
+      "endDate": "2020-01-01"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "React - The Complete Guide",
+      "date": "2020-10-01",
+      "issuer": "Udemy",
+      "url": "http://ude.my/UC-929881bb-bd97-493e-9e4d-3ad6143f65af"
+    }
+  ],
   "skills": [
     {
       "name": "HTML",
       "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend"]
     },
     {
       "name": "CSS",
       "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Diseño Responsive"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
     },
     {
       "name": "JavaScript",
       "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
     },
     {
       "name": "Tailwind",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
       ]
     },
     {
       "name": "TypeScript",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
       ]
     },
     {
       "name": "Node",
       "level": "Medio",
-      "keywords": [
-        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
-      ]
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
     },
     {
       "name": "MySQL",
       "level": "Medio",
       "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
       ]
     },
     {
       "name": "Git",
       "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente"
-      ]
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
     },
     {
       "name": "GitHub",
       "level": "Avanzado",
       "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
       ]
     },
     {
       "name": "Next.js",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
       ]
     },
     {
       "name": "React",
       "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
-      ]
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
     }
   ],
   "languages": [
@@ -164,11 +168,7 @@
       "name": "GOG Regional Price",
       "isActive": true,
       "description": "Compara los precios de los videojuegos en GOG entre diferentes regiones",
-      "highlights": [
-        "Ahorra dinero",
-        "Svelte",
-        "Serverless"
-      ],
+      "highlights": ["Ahorra dinero", "Svelte", "Serverless"],
       "url": "https://gog.rodrigotome.es",
       "github": "https://github.com/RodrigoTomeES/gog-regions-prices"
     },
@@ -176,11 +176,7 @@
       "name": "Astro Rename",
       "isActive": true,
       "description": "Minimiza el tamaño de las clases TailwindCSS y reduce hasta un 50% el HTML",
-      "highlights": [
-        "Astro",
-        "TailwindCSS",
-        "Plugin"
-      ],
+      "highlights": ["Astro", "TailwindCSS", "Plugin"],
       "url": "https://www.npmjs.com/package/astro-rename",
       "github": "https://github.com/RodrigoTomeES/astro-rename"
     },
@@ -188,43 +184,31 @@
       "name": "Giveaway Alert Bot",
       "isActive": true,
       "description": "Bot de Telegram que avisa de los giveaways que se realizan en diferentes plataformas",
-      "highlights": [
-        "Juegos gratis",
-        "Telegram Bot",
-        "Docker"
-      ],
+      "highlights": ["Juegos gratis", "Telegram Bot", "Docker"],
+      "url": "",
       "github": "https://github.com/RodrigoTomeES/giveaway-alert-bot"
     },
     {
       "name": "Bookmarks to Notion",
       "isActive": false,
       "description": "Convierte los marcadores de Firefox en una base de datos de Notion",
-      "highlights": [
-        "Notion",
-        "Firefox",
-        "CSV"
-      ],
+      "highlights": ["Notion", "Firefox", "CSV"],
       "url": "https://rodrigotomees.github.io/html-bookmark-to-csv/",
       "github": "https://github.com/RodrigoTomeES/html-bookmark-to-csv"
     },
     {
       "name": "EML to HTML",
+      "isActive": false,
       "description": "Extrae el contenido de los correos electrónicos en formato EML y los convierte en HTML",
-      "highlights": [
-        "Node.js",
-        "EML"
-      ],
+      "highlights": ["Node.js", "EML"],
+      "url": "",
       "github": "https://github.com/RodrigoTomeES/eml_to_html"
     },
     {
       "name": "AWA DB",
       "isActive": false,
       "description": "Base de datos de Alienware Arena (AWA) con información de los items que se venden en el marketplace",
-      "highlights": [
-        "Astro",
-        "TailwindCSS",
-        "DB"
-      ],
+      "highlights": ["Astro", "TailwindCSS", "DB"],
       "url": "https://https://awadb.rodrigotome.es/",
       "github": "https://github.com/RodrigoTomeES/awa-db"
     }
