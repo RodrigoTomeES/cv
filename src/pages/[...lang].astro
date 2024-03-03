@@ -1,0 +1,44 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import About from "@/components/sections/About.astro"
+import Education from "@/components/sections/Education.astro"
+import Experience from "@/components/sections/Experience.astro"
+import Hero from "@/components/sections/Hero.astro"
+import Projects from "@/components/sections/Projects.astro"
+import Skills from "@/components/sections/Skills.astro"
+
+import type { GetStaticPaths } from "astro"
+import { getCollection } from "astro:content"
+import Section from "@/components/Section.astro"
+import { useTranslations } from "@/i18n/utils"
+import { i18n } from "@/i18n/config"
+
+type RestLang = Exclude<typeof i18n.locales[number], typeof i18n.defaultLocale> | undefined; 
+
+export const getStaticPaths = (async () => {
+  const pages = await getCollection('cv');
+
+  const paths = pages.map(page => {
+    const [lang] = page.id.split('/');
+    const rest = i18n.defaultLocale === lang ? undefined : lang;
+    return { params: { lang: rest as RestLang }, props: page.data };
+  });
+
+  return paths;
+}) satisfies GetStaticPaths;
+
+const { lang } = Astro.params;
+const { basics, education, work, projects, skills } = Astro.props;
+const { name, label, summary} = basics;
+const t = useTranslations(lang ?? i18n.defaultLocale);
+---
+
+<Layout title={`${t('title')} ${name} - ${label}`} description={summary}>
+  <Section><Hero basics={basics} /></Section>
+  <Section title={t('sections.about')}><About summary={summary} /></Section>
+  <Section title={t('sections.experience')}><Experience work={work} /></Section>
+  <Section title={t('sections.education')}><Education education={education} /></Section>
+  <Section title={t('sections.projects')}><Projects projects={projects} /></Section>
+  <Section title={t('sections.skills')}><Skills skills={skills} /></Section>
+</Layout>

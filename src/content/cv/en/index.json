@@ -1,0 +1,206 @@
+{
+  "basics": {
+    "name": "Rodrigo Tomé Nieto",
+    "label": "Front End Lead with over 4 years of experience focused on performance and code quality.",
+    "image": "/me.webp",
+    "email": "hi@rodrigotome.es",
+    "phone": "",
+    "url": "https://cv.rodrigotome.es",
+    "summary": "With over 4 years of professional experience and a broad background in web development, I stand out for my continuous update on the latest technological trends. Passionate about technology, I enjoy exploring emerging tools. My expertise includes Next.js, Storybook, TypeScript, and Tailwind. As a team leader, I encourage individual development to achieve maximum collective performance.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Logroño",
+      "countryCode": "ES",
+      "region": "Spain"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "rodrigotomees",
+        "url": "https://linkedin.com/in/rodrigotomees"
+      },
+      {
+        "network": "X",
+        "username": "rodrigotomees",
+        "url": "https://x.com/rodrigotomees"
+      },
+      {
+        "network": "GitHub",
+        "username": "rodrigotomees",
+        "url": "https://github.com/rodrigotomees"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Globant Create",
+      "position": "Front End Lead",
+      "url": "https://www.globant.com/studio/create",
+      "startDate": "2022-09-01",
+      "endDate": null,
+      "summary": "In my role, I lead teams, establish code standards, and improve the development experience. I develop critical parts in projects, provide support where needed, and foster the development of the potential of other developers.",
+      "highlights": ["Promoted to Front End Lead"]
+    },
+    {
+      "name": "Globant Create",
+      "position": "Web Developer",
+      "url": "https://www.globant.com/studio/create",
+      "startDate": "2019-09-01",
+      "endDate": "2022-09-01",
+      "summary": "In my early days in the company, I worked on development with Wordpress, PHP, and SASS. Over time, I participated in increasingly relevant projects and provided support in various initiatives. Progressively, I led the modernization of the stack towards Next.js, React, and TypeScript, specializing in these technologies.",
+      "highlights": ["Started at the company"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of La Rioja",
+      "url": "https://www.unirioja.es/",
+      "area": "Bachelor's in Computer Engineering with a focus on Software Engineering and Knowledge Management.",
+      "studyType": "Bachelor",
+      "startDate": "2016-01-01",
+      "endDate": "2020-01-01"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "React - The Complete Guide",
+      "date": "2020-10-01",
+      "issuer": "Udemy",
+      "url": "http://ude.my/UC-929881bb-bd97-493e-9e4d-3ad6143f65af"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend", "Responsive Design"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "CSS Framework",
+        "Responsive Design"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Intermediate",
+      "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Intermediate",
+      "keywords": ["Databases", "SQL", "Data Storage", "Backend"]
+    },
+    {
+      "name": "Git",
+      "level": "Advanced",
+      "keywords": ["Version Control", "Collaboration", "Source Code"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Advanced",
+      "keywords": ["Version Control", "Collaboration", "Source Code", "Git"]
+    },
+    {
+      "name": "Next.js",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Intermediate"
+    }
+  ],
+  "projects": [
+    {
+      "name": "GOG Regional Price",
+      "isActive": true,
+      "description": "Compare game prices on GOG across different regions",
+      "highlights": ["Save money", "Svelte", "Serverless"],
+      "url": "https://gog.rodrigotome.es",
+      "github": "https://github.com/RodrigoTomeES/gog-regions-prices"
+    },
+    {
+      "name": "Astro Rename",
+      "isActive": true,
+      "description": "Minimize the size of TailwindCSS classes and reduce HTML by up to 50%",
+      "highlights": ["Astro", "TailwindCSS", "Plugin"],
+      "url": "https://www.npmjs.com/package/astro-rename",
+      "github": "https://github.com/RodrigoTomeES/astro-rename"
+    },
+    {
+      "name": "Giveaway Alert Bot",
+      "isActive": true,
+      "description": "Telegram bot that notifies about giveaways on different platforms",
+      "highlights": ["Free games", "Telegram Bot", "Docker"],
+      "url": "",
+      "github": "https://github.com/RodrigoTomeES/giveaway-alert-bot"
+    },
+    {
+      "name": "Bookmarks to Notion",
+      "isActive": false,
+      "description": "Convert Firefox bookmarks into a Notion database",
+      "highlights": ["Notion", "Firefox", "CSV"],
+      "url": "https://rodrigotomees.github.io/html-bookmark-to-csv/",
+      "github": "https://github.com/RodrigoTomeES/html-bookmark-to-csv"
+    },
+    {
+      "name": "EML to HTML",
+      "isActive": false,
+      "description": "Extract content from EML format emails and convert them to HTML",
+      "highlights": ["Node.js", "EML"],
+      "url": "",
+      "github": "https://github.com/RodrigoTomeES/eml_to_html"
+    },
+    {
+      "name": "AWA DB",
+      "isActive": false,
+      "description": "Alienware Arena (AWA) database with information on items sold in the marketplace",
+      "highlights": ["Astro", "TailwindCSS", "DB"],
+      "url": "https://awadb.rodrigotome.es/",
+      "github": "https://github.com/RodrigoTomeES/awa-db"
+    }
+  ]
+}

@@ -1,21 +1,23 @@
 ---
-import { basics } from "@cv"
+import { basics } from "@/content/cv/es/index.json"
+import { getLangFromUrl } from "@/i18n/utils";
 
 interface Props {
   title: string
+  description: string
 }
 
-const { title } = Astro.props
-
-const { image, summary, url } = basics
+const lang = getLangFromUrl(Astro.url);
+const { title, description } = Astro.props
+const { image, url } = basics
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta name="description" content={summary} />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="image" href={image} />
@@ -23,18 +25,20 @@ const { image, summary, url } = basics
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={summary} />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content={url.split("//")[1] ?? ''} />
     <meta property="twitter:url" content={url} />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={summary} />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="" />
   </head>
   <body>
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
 
@@ -98,6 +102,18 @@ const { image, summary, url } = basics
     line-height: 1.5;
     margin: 0;
     text-wrap: pretty;
+  }
+
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
   }
 
   .print {

@@ -1,5 +1,4 @@
 ---
-import Section from "../Section.astro"
 import HTML from "@/icons/html.astro"
 import CSS from "@/icons/css.astro"
 import JavaScript from "@/icons/javascript.astro"
@@ -11,7 +10,14 @@ import Git from "@/icons/git.astro"
 import GitHub from "@/icons/GitHub.astro"
 import Tailwind from "@/icons/tailwind.astro"
 import Next from "@/icons/next.astro"
-import { skills } from "@cv"
+
+import type { CollectionEntry } from 'astro:content';
+
+type Props = {
+  skills: CollectionEntry<'cv'>['data']['skills']
+}
+
+const { skills } = Astro.props
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -28,22 +34,20 @@ const SKILLS_ICONS: Record<string, any> = {
 }
 ---
 
-<Section title="Habilidades">
-  <ul>
-    {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name
-        const Icon = SKILLS_ICONS[iconName]
+<ul>
+  {
+    skills.map(({ name }) => {
+      const iconName = name === "Next.js" ? "Next" : name
+      const Icon = SKILLS_ICONS[iconName]
 
-        return (
-          <li>
-            {Icon && <Icon />} <span>{name}</span>
-          </li>
-        )
-      })
-    }
-  </ul>
-</Section>
+      return (
+        <li>
+          {Icon && <Icon />} <span>{name}</span>
+        </li>
+      )
+    })
+  }
+</ul>
 
 <style>
   ul {
