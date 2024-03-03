@@ -102,12 +102,14 @@ pnpm dev
 
 ## TODO
 
-- [ ] Añadir i18n
+- [x] Añadir i18n
 - [ ] Añadir más skills
 - [ ] Añadir soporte para modo oscuro
 - [ ] Actualizar README
 - [ ] Comprobar rendimiento
-- [ ] Añadir astro-rename
+- [ ] Añadir astro-rename si se cambia a tailwind
 - [ ] Accesibilidad
 - [ ] 404
 - [ ] Añadir esLint, Prettier, Husky, Lint-staged, Commitlint
+- [ ] Añadir enlace para descargar en pdf y enlace para acceder al json
+- [ ] Añadir og image
