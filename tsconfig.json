@@ -1,8 +1,7 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "baseUrl": ".",
-    "verbatimModuleSyntax": true,
     "paths": {
       "@cv": [
         "./cv.json"
