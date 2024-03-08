@@ -1,3 +1,4 @@
+import { i18n } from './config';
 import { ui, defaultLang, showDefaultLang } from './ui';
 
 export function getLangFromUrl(url: URL) {
@@ -6,11 +7,19 @@ export function getLangFromUrl(url: URL) {
   return defaultLang;
 }
 
-export function useTranslations(lang: keyof typeof ui) {
-  return function t(key: keyof typeof ui[typeof defaultLang]) {
-    return ui[lang][key] || ui[defaultLang][key];
-  }
-}
+type UI = typeof ui;
+
+export declare function useTranslations<L extends keyof UI>(
+  lang: L,
+): {
+  [K in
+    | keyof UI[L]
+    | keyof UI[typeof i18n.defaultLocale]]: K extends keyof UI[L]
+    ? UI[L][K]
+    : K extends keyof UI[typeof i18n.defaultLocale]
+    ? UI[typeof i18n.defaultLocale][K]
+    : never;
+};
 
 export function useTranslatedPath(lang: keyof typeof ui) {
   return function translatePath(path: string, l: string = lang) {

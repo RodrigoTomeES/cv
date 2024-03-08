@@ -1,15 +1,18 @@
 ---
-import { basics } from "@/content/cv/es/index.json"
-import { getLangFromUrl } from "@/i18n/utils";
+import { basics } from "@/content/cv/es/index.json";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
+import { i18n } from "@/i18n/config";
 
-interface Props {
+type Props = {
   title: string
   description: string
 }
 
 const lang = getLangFromUrl(Astro.url);
-const { title, description } = Astro.props
-const { image, url } = basics
+const translatePath = useTranslatedPath(lang);
+const restLangs = i18n.locales.filter((l) => l !== lang);
+const { title, description } = Astro.props;
+const { image, url } = basics;
 ---
 
 <!doctype html>
@@ -27,6 +30,7 @@ const { image, url } = basics
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="" />
+    <meta property="og:locale" content={lang} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content={url.split("//")[1] ?? ''} />
@@ -34,6 +38,13 @@ const { image, url } = basics
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="" />
+
+    {
+      i18n.locales.map((l) => <link rel="alternate" href={translatePath(Astro.url.pathname, l)} hreflang={l} />)
+    }
+    {
+      restLangs.map((lang) => <meta property="og:locale:alternate" content={lang} />)
+    }
   </head>
   <body>
     <main>

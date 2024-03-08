@@ -1,4 +1,5 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import type { CollectionEntry } from 'astro:content';
 
 type Props = {
@@ -6,6 +7,9 @@ type Props = {
 }
 
 const { education } = Astro.props
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <ul>
@@ -13,7 +17,7 @@ const { education } = Astro.props
     education.map(({ institution, startDate, endDate, area }) => {
       const startYear = new Date(startDate).getFullYear()
       const endYear =
-        endDate != null ? new Date(endDate).getFullYear() : "Actual"
+        endDate != null ? new Date(endDate).getFullYear() : t['common.present']
       const years = `${startYear} - ${endYear}`
 
       return (
