@@ -10,7 +10,7 @@ export const showDefaultLang = false;
 
 export const ui = {
   es: {
-    title: "Portafolio de",
+    title: ({ name, label }: { name: string, label: string }) => `CV de ${name} - ${label}`,
     "sections.about": "Sobre mí",
     "sections.experience": "Experiencia laboral",
     "sections.education": "Educación",
@@ -25,7 +25,7 @@ export const ui = {
     "see.source": ({ name }: { name: string }) => `Ver código fuente del proyecto ${name}`,
   },
   en: {
-    title: "Portfolio of",
+    title: ({ name, label }: { name: string, label: string }) => `${name}'s CV - ${label}`,
     "sections.about": "About me",
     "sections.experience": "Work Experience",
     "sections.education": "Education",
