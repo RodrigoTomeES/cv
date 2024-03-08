@@ -23,7 +23,7 @@ const t = useTranslations(lang);
               <header>
                 <h3>
                   {url ? 
-                    <a href={url} target="_blank" title={t['see.project']({ name })}>
+                    <a href={url} target="_blank" title={t('see.project', { name })}>
                       {name}
                     </a>
                     : name
@@ -34,7 +34,7 @@ const t = useTranslations(lang);
                       class="github-code-link"
                       href={github}
                       target="_blank"
-                      title={t['see.source']({ name })}
+                      title={t('see.source', { name })}
                     >
                       <GitHub />
                     </a>

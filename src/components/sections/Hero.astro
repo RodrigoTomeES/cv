@@ -48,7 +48,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
         email && (
           <a
             href={`mailto:${email}`}
-            title={t["see.email"]({ name, email })}
+            title={t("see.email", { name, email })}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,7 +60,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
         phone && (
           <a
             href={`tel:${phone}`}
-            title={t["see.phone"]({ name, phone })}
+            title={t("see.phone", { name, phone })}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -75,7 +75,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
           return (
             <a
               href={url}
-              title={t["see.network"]({ name, network })}
+              title={t("see.network", { name, network })}
               target="_blank"
               rel="noopener noreferrer"
             >

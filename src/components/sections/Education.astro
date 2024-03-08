@@ -17,7 +17,7 @@ const t = useTranslations(lang);
     education.map(({ institution, startDate, endDate, area }) => {
       const startYear = new Date(startDate).getFullYear()
       const endYear =
-        endDate != null ? new Date(endDate).getFullYear() : t['common.present']
+        endDate != null ? new Date(endDate).getFullYear() : t('common.present')
       const years = `${startYear} - ${endYear}`
 
       return (

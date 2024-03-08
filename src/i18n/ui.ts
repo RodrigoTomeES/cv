@@ -8,6 +8,18 @@ export const languages = {
 export const defaultLang = i18n.defaultLocale;
 export const showDefaultLang = false;
 
+export type LConfP = Record<
+  string,
+  | string
+  // I honestly don't know what to do here other than never
+  | ((props: never) => string)
+>;
+
+type LConf = { [K in (typeof i18n)["defaultLocale"]]: LConfP } & Record<
+  string,
+  LConfP
+>;
+
 export const ui = {
   es: {
     title: ({ name, label }: { name: string, label: string }) => `CV de ${name} - ${label}`,
@@ -39,4 +51,4 @@ export const ui = {
     "see.project": ({ name }: { name: string }) => `See the project ${name}`,
     "see.source": ({ name }: { name: string }) => `See the source code of the project ${name}`,
   },
-} as const;
+} satisfies LConf;

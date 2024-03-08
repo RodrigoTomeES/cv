@@ -18,7 +18,7 @@ const t = useTranslations(lang);
       ({ name, startDate, endDate, position, summary, url }) => {
         const startYear = new Date(startDate).getFullYear()
         const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : t['common.present']
+          endDate != null ? new Date(endDate).getFullYear() : t('common.present')
         const years = `${startYear} - ${endYear}`
 
         return (
@@ -27,7 +27,7 @@ const t = useTranslations(lang);
               <header>
                 <div>
                   <h3>
-                    <a href={url} title={t['common.seeLink']({ link: name })} target="_blank">
+                    <a href={url} title={t('common.seeLink', { link: name })} target="_blank">
                       {name}
                     </a>
                   </h3>
