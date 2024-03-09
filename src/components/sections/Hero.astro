@@ -37,7 +37,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
     <h1>{name}</h1>
     <h2>{label}</h2>
     <span>
-      <WorldMap />
+      <WorldMap width={12} />
       {city}, {region}
     </span>
     <footer class="print">
@@ -52,7 +52,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Mail />
+            <Mail width={16} />
           </a>
         )
       }
@@ -64,7 +64,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Phone />
+            <Phone width={16} />
           </a>
         )
       }
@@ -79,7 +79,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon />
+              <Icon width={16} />
             </a>
           )
         })
