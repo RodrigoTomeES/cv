@@ -40,7 +40,7 @@ const { image, url } = basics;
     <meta name="twitter:image" content="" />
 
     {
-      i18n.locales.map((l) => <link rel="alternate" href={translatePath(Astro.url.pathname, l)} hreflang={l} />)
+      i18n.locales.map((l) => <link rel="alternate" href={new URL(translatePath(Astro.url.pathname, l), Astro.site)} hreflang={l} />)
     }
     {
       restLangs.map((lang) => <meta property="og:locale:alternate" content={lang} />)
