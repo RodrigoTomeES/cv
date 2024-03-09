@@ -2,6 +2,7 @@
 import { basics } from "@/content/cv/es/index.json";
 import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
 import { i18n } from "@/i18n/config";
+import { removeTrailingSlash } from "@/utils";
 
 type Props = {
   title: string
@@ -19,6 +20,7 @@ const alternate = i18n.locales.map((l) => {
   }
 });
 const restLangs = i18n.locales.filter((l) => l !== lang);
+const canonicalUrl = removeTrailingSlash(new URL(Astro.url.pathname, Astro.site).toString());
 const { title, description } = Astro.props;
 const { image, url } = basics;
 ---
@@ -32,6 +34,7 @@ const { image, url } = basics;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="image" href={image} />
+    <link rel="canonical" href={canonicalUrl} />
 
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />

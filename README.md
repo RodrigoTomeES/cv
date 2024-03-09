@@ -103,6 +103,9 @@ pnpm dev
 ## TODO
 
 - [x] Añadir i18n
+- [x] Añadir imagenes optimizadas
+- [x] Arreglar hreflang
+- [x] quitar trailing slash urls
 - [ ] Selector de idioma
 - [ ] Autodetectar idioma
 - [ ] Añadir más skills
@@ -111,11 +114,8 @@ pnpm dev
 - [ ] Autodeteccion modo oscuro
 - [ ] Actualizar README
 - [ ] Comprobar rendimiento
-- [x] Añadir imagenes optimizadas
 - [ ] Embeber estilos criticos
 - [ ] Estudiar embeber imagen
-- [ ] quitar trailing slash urls
-- [x] Arreglar hreflang
 - [ ] Añadir astro-rename si se cambia a tailwind
 - [ ] Accesibilidad
 - [ ] 404
@@ -123,3 +123,6 @@ pnpm dev
 - [ ] Añadir enlace para descargar en pdf y enlace para acceder al json
 - [ ] Añadir og image
 - [ ] Actualizar scripts para parecerse a next.js
+- [ ] Arreglar pagespeed problems
+- [ ] Añadir sitemap
+- [ ] Arreglar w3c problems
