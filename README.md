@@ -111,7 +111,7 @@ pnpm dev
 - [ ] Autodeteccion modo oscuro
 - [ ] Actualizar README
 - [ ] Comprobar rendimiento
-- [ ] Añadir imagenes optimizadas
+- [x] Añadir imagenes optimizadas
 - [ ] Embeber estilos criticos
 - [ ] Estudiar embeber imagen
 - [ ] quitar trailing slash urls
@@ -122,3 +122,4 @@ pnpm dev
 - [ ] Añadir esLint, Prettier, Husky, Lint-staged, Commitlint
 - [ ] Añadir enlace para descargar en pdf y enlace para acceder al json
 - [ ] Añadir og image
+- [ ] Actualizar scripts para parecerse a next.js
