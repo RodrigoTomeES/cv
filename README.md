@@ -103,10 +103,19 @@ pnpm dev
 ## TODO
 
 - [x] Añadir i18n
+- [ ] Selector de idioma
+- [ ] Autodetectar idioma
 - [ ] Añadir más skills
 - [ ] Añadir soporte para modo oscuro
+- [ ] Selector de temas
+- [ ] Autodeteccion modo oscuro
 - [ ] Actualizar README
 - [ ] Comprobar rendimiento
+- [ ] Añadir imagenes optimizadas
+- [ ] Embeber estilos criticos
+- [ ] Estudiar embeber imagen
+- [ ] quitar trailing slash urls
+- [x] Arreglar hreflang
 - [ ] Añadir astro-rename si se cambia a tailwind
 - [ ] Accesibilidad
 - [ ] 404
