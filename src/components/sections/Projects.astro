@@ -36,7 +36,7 @@ const t = useTranslations(lang);
                       target="_blank"
                       title={t('see.source', { name })}
                     >
-                      <GitHub />
+                      <GitHub width={16} />
                     </a>
                   )}
                 </h3>
@@ -121,11 +121,10 @@ const t = useTranslations(lang);
 
   .github-code-link {
     margin-left: 5px;
-    padding-inline: 4px;
-  
-    &:hover {
-      opacity: 0.6;
-    }
+  }
+
+  .github-code-link:hover {
+    opacity: 0.6;
   }
 
   @keyframes flicker {
