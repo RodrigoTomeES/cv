@@ -1,3 +1,9 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = Omit<HTMLAttributes<'svg'>, 'fill' | 'stroke' | 'viewBox' | 'stroke-width' | 'stroke-linecap' | 'stroke-linejoin'>;
+---
+
 <svg
     width="16"
     height="16"

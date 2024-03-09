@@ -1,13 +1,7 @@
-<svg
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    stroke-width="2"
-    stroke="currentColor"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-        d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993"></path><path
-        d="M15 12v-3"></path></svg
->
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = Omit<HTMLAttributes<'svg'>, 'fill' | 'stroke' | 'viewBox' | 'stroke-width' | 'stroke-linecap' | 'stroke-linejoin'>;
+---
+
+<svg {...Astro.props} fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M9 15V9l7.745 10.65A9 9 0 1 1 19 17.657M15 12V9"/></svg>
