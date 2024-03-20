@@ -13,24 +13,24 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<ul>
+<ul class="grid gap-4 -mx-4 [grid-template-columns:_repeat(auto-fit,_minmax(200px,_1fr))]">
   {
     projects.map(
       ({ url, description, highlights, name, isActive, github }) => (
         <li>
-          <article>
-            <header>
-              <h3>
+          <article class="rounded-lg border-primary-50 md:border md:border-solid gap-4 flex flex-col p-2.5 md:p-4 h-full shadow-sm shadow-primary-50 md:shadow-none">
+            <header class="flex-1">
+              <h3 class="text-lg font-bold md:mb-1 inline-flex place-items-center gap-1 flex-wrap">
                 {url ? 
-                  <a href={url} target="_blank" title={t('see.project', { name })}>
+                  <a class="hover:underline shrink-0" href={url} target="_blank" title={t('see.project', { name })}>
                     {name}
                   </a>
                   : name
                 }
-                {isActive && <span>•</span>}
+                {isActive && <span class="print:animate-none text-accent animate-flicker">•</span>}
                 {github && (
                   <a
-                    class="github-code-link"
+                    class="ml-1.5 hover:opacity-60 text-primary-900"
                     href={github}
                     target="_blank"
                     title={t('see.source', { name })}
@@ -39,10 +39,10 @@ const t = useTranslations(lang);
                   </a>
                 )}
               </h3>
-              <p>{description}</p>
+              <p class="mb-1 text-xs text-primary-400 text-pretty">{description}</p>
             </header>
-            <footer>
-              {highlights.map((highlight) => <span>{highlight}</span>)}
+            <footer class="flex flex-wrap gap-1">
+              {highlights.map((highlight) => <span class="rounded-md py-1 px-2 [font-size:_0.68rem] leading-none bg-primary-100 text-primary-600">{highlight}</span>)}
             </footer>
           </article>
         </li>
@@ -50,106 +50,3 @@ const t = useTranslations(lang);
     )
   }
 </ul>
-
-<style>
-  ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-inline: -16px;
-  }
-
-  article {
-    border-radius: 8px;
-    border: 1px solid #f2f2f2;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    height: 100%;
-  }
-
-  article header {
-    flex: 1;
-  }
-
-  article h3 {
-    margin-bottom: 4px;
-  }
-
-  article a {
-    color: #111;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article p {
-    font-size: 0.75rem;
-    line-height: 1.2rem;
-    margin-bottom: 4px;
-  }
-
-  article h3 span {
-    color: rgb(0, 188, 47);
-    animation-name: flicker;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-  }
-
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    font-size: 0.6rem;
-  }
-
-  footer span {
-    border-radius: 6px;
-    background: #eee;
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
-  }
-
-  .github-code-link {
-    margin-left: 5px;
-  }
-
-  .github-code-link:hover {
-    opacity: 0.6;
-  }
-
-  @keyframes flicker {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.25;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @media (width <= 700px) {
-    ul {
-      margin-inline: 0px;
-    }
-
-    article {
-      border: none;
-      box-shadow: 0 1px 1px #f2f2f2;
-      padding: 0 0 16px 0;
-    }
-  }
-
-  @media print {
-    article h3 span {
-      animation-name: none;
-    }
-  }
-</style>

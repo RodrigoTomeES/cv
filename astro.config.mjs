@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import { i18n } from './src/i18n/config';
 import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
     integrations: [
         sitemap(),
         compress({ img: false, SVG: false }),
+        tailwind()
     ],
     i18n
 });

@@ -4,6 +4,8 @@ import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
 import { i18n } from "@/i18n/config";
 import { removeTrailingSlash } from "@/utils";
 
+import '@/css/global.css';
+
 type Props = {
   title: string
   description: string
@@ -26,7 +28,7 @@ const { image, url } = basics;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} class="bg-white tracking-tight">
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
@@ -58,105 +60,8 @@ const { image, url } = basics;
     }
   </head>
   <body>
-    <main>
+    <main class="p-8 md:p-16 w-full">
       <slot />
     </main>
   </body>
 </html>
-
-<style is:global>
-  html {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      "Courier New",
-      Courier,
-      monospace;
-    background: #fff;
-    letter-spacing: -0.025rem;
-  }
-
-  body,
-  figure {
-    margin: 0;
-    padding: 0;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin: 0;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
-  }
-
-  p {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
-    text-wrap: pretty;
-  }
-
-  main {
-    padding: 4rem;
-    margin: auto;
-    width: 100%;
-  }
-
-  @media (width <= 700px) {
-    main {
-      padding: 2rem;
-    }
-  }
-
-  .print {
-    display: none !important;
-  }
-
-  @media print {
-    .no-print {
-      display: none !important;
-    }
-
-    .print {
-      display: block !important;
-    }
-
-    astro-dev-toolbar {
-      display: none !important;
-    }
-
-    article {
-      break-inside: avoid;
-    }
-  }
-</style>

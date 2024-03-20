@@ -12,7 +12,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<ul>
+<ul class="flex flex-col gap-8">
   {
     work.map(
       ({ name, startDate, endDate, position, summary, url }) => {
@@ -24,21 +24,21 @@ const t = useTranslations(lang);
         return (
           <li>
             <article>
-              <header>
+              <header class="flex justify-between items-start mb-1">
                 <div>
                   <h3>
-                    <a href={url} title={t('common.seeLink', { link: name })} target="_blank">
+                    <a class="hover:underline text-lg text-primary-900 font-medium" href={url} title={t('common.seeLink', { link: name })} target="_blank">
                       {name}
                     </a>
                   </h3>
-                  <h4>{position}</h4>
+                  <h4 class="text-primary-800">{position}</h4>
                 </div>
 
-                <time>{years}</time>
+                <time class="text-right min-w-28 text-sm text-primary-500">{years}</time>
               </header>
 
               <footer>
-                <p>{summary}</p>
+                <p class="text-sm text-primary-400 text-pretty">{summary}</p>
               </footer>
             </article>
           </li>
@@ -47,43 +47,3 @@ const t = useTranslations(lang);
     )
   }
 </ul>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  article a {
-    color: #111;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #222;
-    font-weight: 400;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-    text-align: right;
-  }
-</style>

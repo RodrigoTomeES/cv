@@ -12,7 +12,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<ul>
+<ul class="flex gap-8 flex-col">
   {
     education.map(({ institution, startDate, endDate, area }) => {
       const startYear = new Date(startDate).getFullYear()
@@ -23,16 +23,16 @@ const t = useTranslations(lang);
       return (
         <li>
           <article>
-            <header>
+            <header class="flex justify-between items-start mb-1">
               <div>
-                <h3>{institution}</h3>
+                <h3 class="text-lg font-medium text-primary-900">{institution}</h3>
               </div>
 
-              <time>{years}</time>
+              <time class="text-right min-w-28 text-sm text-primary-500">{years}</time>
             </header>
 
             <footer>
-              <p>{area}</p>
+              <p class="text-sm text-primary-400 text-pretty">{area}</p>
             </footer>
           </article>
         </li>
@@ -40,30 +40,3 @@ const t = useTranslations(lang);
     })
   }
 </ul>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-    text-align: right;
-  }
-</style>

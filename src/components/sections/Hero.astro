@@ -21,6 +21,8 @@ const SOCIAL_ICONS: SocialIcon = {
   GitHub,
   LinkedIn,
   X,
+  Mail,
+  Phone
 }
 
 const lang = getLangFromUrl(Astro.url);
@@ -30,52 +32,34 @@ const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
 const linkedUrl = linkedInfo?.url
 
 const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
+const links = [
+  ... email && [{ href: `mailto:${email}`, title: t("see.email", { name, email }), icon: "Mail" }] || [],
+  ... phone && [{ href: `tel:${phone}`, title: t("see.phone", { name, phone }), icon: "Phone" }] || [],
+  ... profiles.map(({ network, url }) => ({ href: url, title: t("see.network", { name, network }), icon: network })),
+]
 ---
 
-<div class="container">
-  <div class="info">
-    <h1>{name}</h1>
-    <h2>{label}</h2>
-    <span>
+<div class="flex-col-reverse flex md:flex-row items-center justify-between gap-4">
+  <div class="justify-center items-center text-center md:items-start md:text-left flex flex-col gap-2 md:pr-8">
+    <h1 class="font-bold text-4xl">{name}</h1>
+    <h2 class="text-balance font-medium text-lg leading-6 text-primary-600">{label}</h2>
+    <span class="flex items-center gap-1 text-primary-400 text-sm tracking-tighter">
       <WorldMap width={12} />
       {city}, {region}
     </span>
-    <footer class="print">
+    <footer class="print flex gap-1 mt-2 text-primary-500 text-xs">
       {printInfo}
     </footer>
-    <footer class="no-print">
+    <footer class="no-print flex gap-1 mt-2">
       {
-        email && (
-          <a
-            href={`mailto:${email}`}
-            title={t("see.email", { name, email })}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Mail width={16} />
-          </a>
-        )
-      }
-      {
-        phone && (
-          <a
-            href={`tel:${phone}`}
-            title={t("see.phone", { name, phone })}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Phone width={16} />
-          </a>
-        )
-      }
-      {
-        profiles.map(({ network, url }) => {
-          const Icon = SOCIAL_ICONS[network]
+        links.map(({ href, title, icon }) => {
+          const Icon = SOCIAL_ICONS[icon];
 
           return (
             <a
-              href={url}
-              title={t("see.network", { name, network })}
+              class="inline-flex items-center justify-center p-1 w-8 h-8 rounded-lg text-primary-300 hover:bg-primary-100 border border-solid border-primary-100 hover:border-primary-200"
+              href={href}
+              title={title}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -86,104 +70,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
       }
     </footer>
   </div>
-  <figure>
-    <img src={image} alt={name} width="128" height="128" />
+  <figure class="flex-shrink-0">
+    <img class="aspect-square object-cover rounded-2xl" src={image} alt={name} width="128" height="128" />
   </figure>
 </div>
-
-<style>
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-right: 32px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    color: #444;
-    font-weight: 500;
-    font-size: 1.1rem;
-    text-wrap: balance;
-  }
-
-  img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    width: 128px;
-    border-radius: 16px;
-  }
-
-  span {
-    color: #666;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.85rem;
-    letter-spacing: -0.05rem;
-  }
-
-  footer {
-    color: #555;
-    font-size: 0.65rem;
-    display: flex;
-    gap: 4px;
-    margin-top: 8px;
-  }
-
-  footer a {
-    color: #777;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #eee;
-    padding: 4px;
-    height: 32px;
-    width: 32px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-  }
-
-  footer a:hover {
-    background: #eee;
-    border: 1px solid #ddd;
-  }
-
-  @media (width <= 700px) {
-    .container {
-      flex-direction: column-reverse;
-    }
-
-    .info {
-      justify-content: center;
-      align-items: center;
-      padding-right: 0;
-      text-align: center;
-    }
-
-    figure {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h2 {
-      text-wrap: balance;
-    }
-
-    figure {
-      margin: 0 auto;
-    }
-  }
-</style>
