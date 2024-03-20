@@ -11,7 +11,6 @@ export const showDefaultLang = false;
 export type LConfP = Record<
   string,
   | string
-  // I honestly don't know what to do here other than never
   | ((props: never) => string)
 >;
 

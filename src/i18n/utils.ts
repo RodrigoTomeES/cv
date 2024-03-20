@@ -7,7 +7,6 @@ export function getLangFromUrl(url: URL) {
   return defaultLang;
 }
 
-// just alias
 type UI = typeof ui;
 type Fn = (...args: any[]) => any;
 
