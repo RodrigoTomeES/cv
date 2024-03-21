@@ -18,7 +18,7 @@ const t = useTranslations(lang);
     projects.map(
       ({ url, description, highlights, name, isActive, github }) => (
         <li>
-          <article class="rounded-lg border-primary-50 md:border md:border-solid gap-4 flex flex-col p-2.5 md:p-4 h-full shadow-sm shadow-primary-50 md:shadow-none">
+          <article class="rounded-lg border-primary-50 md:border md:border-solid gap-4 flex flex-col p-2.5 md:p-4 h-full shadow-sm shadow-primary-50 md:shadow-none print:break-inside-avoid">
             <header class="flex-1">
               <h3 class="text-lg font-bold md:mb-1 inline-flex place-items-center gap-1 flex-wrap">
                 {url ? 

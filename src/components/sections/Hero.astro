@@ -47,10 +47,10 @@ const links = [
       <WorldMap width={12} />
       {city}, {region}
     </span>
-    <footer class="print flex gap-1 mt-2 text-primary-500 text-xs">
+    <footer class="gap-1 mt-2 text-primary-500 text-xs print:flex hidden">
       {printInfo}
     </footer>
-    <footer class="no-print flex gap-1 mt-2">
+    <footer class="print:hidden flex gap-1 mt-2">
       {
         links.map(({ href, title, icon }) => {
           const Icon = SOCIAL_ICONS[icon];
