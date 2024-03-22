@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
 import tailwind from '@astrojs/tailwind';
 import rename from 'astro-rename';
-import critters from 'astro-critters';
 
 // https://astro.build/config
 export default defineConfig({
