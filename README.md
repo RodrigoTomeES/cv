@@ -108,6 +108,7 @@ pnpm dev
 - [x] quitar trailing slash urls
 - [x] Embeber estilos criticos
 - [x] Añadir sitemap
+- [x] Añadir astro-rename si se cambia a tailwind
 - [ ] Selector de idioma
 - [ ] Autodetectar idioma
 - [ ] Añadir más skills
@@ -117,7 +118,6 @@ pnpm dev
 - [ ] Actualizar README
 - [ ] Comprobar rendimiento
 - [ ] Estudiar embeber imagen
-- [ ] Añadir astro-rename si se cambia a tailwind
 - [ ] Accesibilidad
 - [ ] 404
 - [ ] Añadir esLint, Prettier, Husky, Lint-staged, Commitlint
