@@ -6,7 +6,7 @@ export const languages = {
 };
 
 export const defaultLang = i18n.defaultLocale;
-export const showDefaultLang = false;
+export const showDefaultLang = i18n.routing.prefixDefaultLocale;
 
 export type LConfP = Record<
   string,
