@@ -13,25 +13,23 @@ import { getCollection } from "astro:content"
 import Section from "@/components/Section.astro"
 import { useTranslations } from "@/i18n/utils"
 import { i18n } from "@/i18n/config"
-
-type RestLang = Exclude<typeof i18n.locales[number], typeof i18n.defaultLocale> | undefined; 
+import { showDefaultLang } from "@/i18n/ui"
 
 export const getStaticPaths = (async () => {
   const pages = await getCollection('cv');
 
   const paths = pages.map(page => {
     const [lang] = page.id.split('/');
-    const rest = i18n.defaultLocale === lang ? undefined : lang;
-    return { params: { lang: rest as RestLang }, props: page.data };
+    const realPath = i18n.defaultLocale === lang && !showDefaultLang ? undefined : page.id.includes('index') ? lang : page.id;
+    return { params: { lang: realPath }, props: page.data };
   });
 
   return paths;
 }) satisfies GetStaticPaths;
 
-const { lang } = Astro.params;
 const { basics, education, work, projects, skills } = Astro.props;
 const { name, label, summary} = basics;
-const t = useTranslations(lang ?? i18n.defaultLocale);
+const t = useTranslations((Astro.currentLocale ?? i18n.defaultLocale) as typeof i18n.defaultLocale);
 ---
 
 <Layout title={t('title', { name, label})} description={summary}>
