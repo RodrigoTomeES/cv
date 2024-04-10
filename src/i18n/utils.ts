@@ -60,7 +60,7 @@ export function useTranslations<L extends keyof UI>(lang: L) {
 }
 
 export function useTranslatedPath(lang: keyof typeof ui) {
-  return function translatePath(path: string, l: string = lang) {
-    return !showDefaultLang && l === defaultLang ? path : `/${l}${path}`
+  return function translatePath(path: string = '/', l: string = lang) {
+    return !showDefaultLang && l === defaultLang ? path : `/${l}${path === '/' ? '' : path}`
   }
 }
