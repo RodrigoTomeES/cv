@@ -28,11 +28,11 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { basics, education, work, projects, skills } = Astro.props;
-const { name, label, summary} = basics;
+const { name, label, summary, url, image } = basics;
 const t = useTranslations((Astro.currentLocale ?? i18n.defaultLocale) as typeof i18n.defaultLocale);
 ---
 
-<Layout title={t('title', { name, label})} description={summary}>
+<Layout title={t('title', { name, label})} description={summary} ogImage={image} websiteUrl={url}>
   <Section><Hero basics={basics} /></Section>
   <Section title={t('sections.about')}><About summary={summary} /></Section>
   <Section title={t('sections.experience')}><Experience work={work} /></Section>

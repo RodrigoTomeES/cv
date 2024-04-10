@@ -1,5 +1,4 @@
 ---
-import { basics } from "@/content/cv/es/index.json";
 import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
 import { i18n } from "@/i18n/config";
 import { removeTrailingSlash } from "@/utils";
@@ -9,6 +8,8 @@ import '@/css/global.css';
 type Props = {
   title: string
   description: string
+  ogImage: string
+  websiteUrl: string
 }
 
 const lang = getLangFromUrl(Astro.url);
@@ -23,8 +24,7 @@ const alternate = i18n.locales.map((l) => {
 });
 const restLangs = i18n.locales.filter((l) => l !== lang);
 const canonicalUrl = removeTrailingSlash(new URL(Astro.url.pathname, Astro.site).toString());
-const { title, description } = Astro.props;
-const { image, url } = basics;
+const { title, description, ogImage, websiteUrl } = Astro.props;
 ---
 
 <!doctype html>
@@ -35,10 +35,10 @@ const { image, url } = basics;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" as="image" href={image} />
+    <link rel="preload" as="image" href={ogImage} />
     <link rel="canonical" href={canonicalUrl} />
 
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={websiteUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -46,8 +46,8 @@ const { image, url } = basics;
     <meta property="og:locale" content={lang} />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={url.split("//")[1] ?? ''} />
-    <meta property="twitter:url" content={url} />
+    <meta property="twitter:domain" content={websiteUrl.split("//")[1] ?? ''} />
+    <meta property="twitter:url" content={websiteUrl} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="" />
