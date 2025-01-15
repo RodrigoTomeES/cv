@@ -39,7 +39,7 @@
       "url": "https://www.globant.com/studio/create",
       "startDate": "2022-09-01",
       "endDate": null,
-      "summary": "En mi rol, lidero equipos, establezco estándares de código y mejoro la experiencia de desarrollo. Desarrollo partes críticas en proyectos, brindo apoyo donde se necesita y fomento el desarrollo del potencial de otros desarrolladores.",
+      "summary": "En mi rol, lidero equipos, establezco estándares de código y mejoro la experiencia de desarrollo. Desarrollo partes críticas en proyectos, brindo apoyo donde se necesita y fomento el desarrollo del potencial de otros desarrolladores. Además, trabajé en la primera integración de Mirakl con Wordpress en el mundo y una de las pocas que se realizó a tiempo.",
       "highlights": ["Fui promocionado a Front End Lead"]
     },
     {
@@ -54,6 +54,14 @@
   ],
   "education": [
     {
+      "institution": "Adobe",
+      "url": "https://www.adobe.com/",
+      "area": "Certificación en Adobe Experience Manager Developer (AD0-E123).",
+      "studyType": "Course",
+      "startDate": "2024",
+      "endDate": "2024"
+    },
+    {
       "institution": "Universidad de La Rioja",
       "url": "https://www.unirioja.es/",
       "area": "Grado en Ingeniería Informática con perfil en Ingeniería del Software y en Gestión del Conocimiento.",
@@ -63,6 +71,12 @@
     }
   ],
   "certificates": [
+    {
+      "name": "Adobe Certified Professional - Adobe Experience Manager Developer",
+      "date": "2024-09-01",
+      "issuer": "Adobe",
+      "url": "https://www.credly.com/badges/1e362db4-faca-4954-a843-8c6026d9745b/linked_in?t=skbq45"
+    },
     {
       "name": "React - The Complete Guide",
       "date": "2020-10-01",
