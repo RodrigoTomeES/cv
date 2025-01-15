@@ -39,7 +39,7 @@
       "url": "https://www.globant.com/studio/create",
       "startDate": "2022-09-01",
       "endDate": null,
-      "summary": "In my role, I lead teams, establish code standards, and improve the development experience. I develop critical parts in projects, provide support where needed, and foster the development of the potential of other developers.",
+      "summary": "In my role, I lead teams, establish code standards, and improve the development experience. I develop critical parts in projects, provide support where needed, and foster the development of the potential of other developers. Also I worked in the first integration of Mirakl with Wordpress in the world and one of least that was made on time.",
       "highlights": ["Promoted to Front End Lead"]
     },
     {
@@ -54,6 +54,14 @@
   ],
   "education": [
     {
+      "institution": "Adobe",
+      "url": "https://www.adobe.com/",
+      "area": "Adobe Experience Manager Developer certification is the industry-recognized validation of one's proficiency in, and successful implementation of Adobe Experience Manager Developer (AD0-E123).",
+      "studyType": "Course",
+      "startDate": "2024",
+      "endDate": "2024"
+    },
+    {
       "institution": "University of La Rioja",
       "url": "https://www.unirioja.es/",
       "area": "Bachelor's in Computer Engineering with a focus on Software Engineering and Knowledge Management.",
@@ -63,6 +71,12 @@
     }
   ],
   "certificates": [
+    {
+      "name": "Adobe Certified Professional - Adobe Experience Manager Developer",
+      "date": "2024-09-01",
+      "issuer": "Adobe",
+      "url": "https://www.credly.com/badges/1e362db4-faca-4954-a843-8c6026d9745b/linked_in?t=skbq45"
+    },
     {
       "name": "React - The Complete Guide",
       "date": "2020-10-01",
