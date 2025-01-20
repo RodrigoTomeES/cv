@@ -11,7 +11,7 @@ import Skills from "@/components/sections/Skills.astro"
 import type { GetStaticPaths } from "astro"
 import { getCollection } from "astro:content"
 import Section from "@/components/Section.astro"
-import { useTranslations } from "@/i18n/utils"
+import { useTranslatedPath, useTranslations } from "@/i18n/utils"
 import { i18n } from "@/i18n/config"
 import { showDefaultLang } from "@/i18n/ui"
 
@@ -27,12 +27,26 @@ export const getStaticPaths = (async () => {
   return paths;
 }) satisfies GetStaticPaths;
 
+const path = Astro.url.pathname.replace(Astro.currentLocale ?? '', '');
 const { basics, education, work, projects, skills } = Astro.props;
 const { name, label, summary, url, image } = basics;
 const t = useTranslations((Astro.currentLocale ?? i18n.defaultLocale) as typeof i18n.defaultLocale);
+const tPath = useTranslatedPath((Astro.currentLocale ?? i18n.defaultLocale) as typeof i18n.defaultLocale);
 ---
 
 <Layout title={t('title', { name, label})} description={summary} ogImage={image} websiteUrl={url}>
+  <Section className="relative flex justify-end">
+    <span class="bg-primary-100 p-1 rounded-3xl inline-flex md:absolute top-0 right-0 print:hidden">
+      {i18n.locales.map(locale => (
+        <a
+          href={tPath(path, locale)}
+          class={`px-2 py-1 min-w-11 text-center leading-none rounded-2xl ${locale === Astro.currentLocale ? 'bg-primary-200' : ''}`}
+        >
+          {locale}
+        </a>
+      ))}
+    </span>
+  </Section>
   <Section><Hero basics={basics} /></Section>
   <Section title={t('sections.about')}><About summary={summary} /></Section>
   <Section title={t('sections.experience')}><Experience work={work} /></Section>
