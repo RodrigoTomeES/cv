@@ -12,7 +12,7 @@ export default defineConfig({
     compressHTML: true,
     output: 'static',
     build: { 
-        format: 'file',
+        format: 'directory',
         inlineStylesheets: 'always'
     },
     integrations: [
