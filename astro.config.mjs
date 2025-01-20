@@ -8,6 +8,7 @@ import rename from 'astro-rename';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://cv.rodrigotome.es',
+    prefetch: true,
     trailingSlash: 'never',
     compressHTML: true,
     output: 'static',
