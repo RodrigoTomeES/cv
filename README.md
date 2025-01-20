@@ -109,7 +109,7 @@ pnpm dev
 - [x] Embeber estilos criticos
 - [x] Añadir sitemap
 - [x] Añadir astro-rename si se cambia a tailwind
-- [ ] Selector de idioma
+- [x] Selector de idioma
 - [ ] Autodetectar idioma
 - [ ] Añadir más skills
 - [ ] Añadir soporte para modo oscuro
