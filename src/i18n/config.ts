@@ -1,6 +1,6 @@
 export const i18n = {
   defaultLocale: "en",
-  locales: ["es", "en"],
+  locales: ["en", "es"],
   routing: {
     prefixDefaultLocale: false,
   }
