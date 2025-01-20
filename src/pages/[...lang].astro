@@ -41,6 +41,7 @@ const tPath = useTranslatedPath((Astro.currentLocale ?? i18n.defaultLocale) as t
         <a
           href={tPath(path, locale)}
           class={`px-2 py-1 min-w-11 text-center leading-none rounded-2xl ${locale === Astro.currentLocale ? 'bg-primary-200' : ''}`}
+          data-astro-prefetch
         >
           {locale}
         </a>
