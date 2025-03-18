@@ -11,13 +11,13 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/sitemap": "3.2.1",
-    "@astrojs/tailwind": "5.1.5",
-    "@types/bun": "1.1.17",
-    "astro": "5.1.8",
+    "@astrojs/sitemap": "3.3.0",
+    "@astrojs/tailwind": "6.0.0",
+    "@types/bun": "1.2.5",
+    "astro": "5.5.3",
     "astro-compress": "2.3.6",
     "astro-rename": "2.0.0-alpha6",
     "tailwindcss": "3.4.17",
-    "typescript": "5.7.3"
+    "typescript": "5.8.2"
   }
 }
