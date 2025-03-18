@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # local folders
 .history
+
+# astro-compres
+.class-maps
