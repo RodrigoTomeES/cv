@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import { i18n } from './src/i18n/config';
 import sitemap from '@astrojs/sitemap';
 import compress from 'astro-compress';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from "@tailwindcss/vite";
 import rename from 'astro-rename';
 
 // https://astro.build/config
@@ -17,14 +17,12 @@ export default defineConfig({
         inlineStylesheets: 'always'
     },
     integrations: [
-        tailwind({
-          config: {
-            applyBaseStyles: false,
-          },
-        }),
         rename({ targetExt: ["html"] }),
         compress({ img: false, SVG: false }),
         sitemap(),
     ],
+    vite: {
+        plugins: [tailwindcss()],
+    },
     i18n
 });
