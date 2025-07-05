@@ -37,9 +37,7 @@ const t = useTranslations(lang);
                 <time class="text-right min-w-28 text-sm text-primary-500">{years}</time>
               </header>
 
-              <footer>
-                <p class="text-sm text-primary-400 text-pretty">{summary}</p>
-              </footer>
+              <footer class="text-sm space-y-2 text-primary-400 text-pretty [&_a]:underline [&_a]:hover:text-primary-800 [&_a]:text-primary-600" set:html={summary} />
             </article>
           </li>
         )
