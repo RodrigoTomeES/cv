@@ -1,8 +1,55 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@theme {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-primary-50: #f2f2f2;
+  --color-primary-100: #eee;
+  --color-primary-200: #ddd;
+  --color-primary-300: #777;
+  --color-primary-400: #666;
+  --color-primary-500: #555;
+  --color-primary-600: #444;
+  --color-primary-800: #222;
+  --color-primary-900: #111;
+
+  --color-accent: #00bc2f;
+
+  --animate-*: initial;
+  --animate-flicker: flicker 3s ease-in infinite;
+
+  @keyframes flicker {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
 @layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
   html {
     font-family: Menlo, Monaco, Lucida Console, "Courier New", Courier,
       monospace;
