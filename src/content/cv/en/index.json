@@ -169,6 +169,14 @@
   ],
   "projects": [
     {
+      "name": "getmcp",
+      "isActive": true,
+      "description": "Universal CLI tool for installing and managing MCP servers across 19+ AI applications",
+      "highlights": ["TypeScript", "CLI", "MCP"],
+      "url": "https://getmcp.es",
+      "github": "https://github.com/RodrigoTomeES/getmcp"
+    },
+    {
       "name": "GOG Regional Price",
       "isActive": true,
       "description": "Compare game prices on GOG across different regions",
