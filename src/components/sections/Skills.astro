@@ -1,48 +1,25 @@
 ---
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
-import React from "@/icons/react.astro"
-import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
-import Git from "@/icons/git.astro"
-import GitHub from "@/icons/GitHub.astro"
-import Tailwind from "@/icons/tailwind.astro"
-import Next from "@/icons/next.astro"
-
 import type { CollectionEntry } from 'astro:content';
+import { ALL_ICONS } from '@/utils'
 
 type Props = {
   skills: CollectionEntry<'cv'>['data']['skills']
 }
 
 const { skills } = Astro.props
-
-const SKILLS_ICONS: Record<string, any> = {
-  HTML,
-  CSS,
-  JavaScript,
-  TypeScript,
-  React,
-  Node,
-  MySQL,
-  Git,
-  GitHub,
-  Next,
-  Tailwind,
-}
 ---
 
 <ul class="inline-flex gap-2 flex-wrap">
   {
     skills.map(({ name }) => {
-      const iconName = name === "Next.js" ? "Next" : name
-      const Icon = SKILLS_ICONS[iconName]
+      // "Docker/Compose/Swarm" => gives "Docker"
+      // "Next.js" => gives "Next"
+      const iconName = name.split(/\W/)[0]
+      const Icon = iconName && ALL_ICONS[iconName]
 
       return (
         <li class="items-center rounded-md flex gap-1 py-1 px-2 text-sm leading-none bg-primary-100 text-black">
-          {Icon && <Icon width={16} />} <span>{name}</span>
+          {Icon && <Icon.default width={16} />} <span>{name}</span>
         </li>
       )
     })
