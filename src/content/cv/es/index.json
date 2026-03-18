@@ -225,14 +225,6 @@
       "highlights": ["Node.js", "EML"],
       "url": "",
       "github": "https://github.com/RodrigoTomeES/eml_to_html"
-    },
-    {
-      "name": "AWA DB",
-      "isActive": false,
-      "description": "Base de datos de Alienware Arena (AWA) con información de los items que se venden en el marketplace",
-      "highlights": ["Astro", "TailwindCSS", "DB"],
-      "url": "https://https://awadb.rodrigotome.es/",
-      "github": "https://github.com/RodrigoTomeES/awa-db"
     }
   ]
 }
