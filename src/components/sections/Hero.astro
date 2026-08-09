@@ -1,11 +1,6 @@
 ---
-import Mail from "@/icons/Mail.astro"
-import Phone from "@/icons/Phone.astro"
-import X from "@/icons/X.astro"
-import LinkedIn from "@/icons/LinkedIn.astro"
-import GitHub from "@/icons/GitHub.astro"
-import WorldMap from "@/icons/WorldMap.astro"
-import type { SocialIcon } from "@/types"
+import WorldMap from "@/icons/worldmap.astro"
+import { ALL_ICONS as SOCIAL_ICONS } from "@/utils";
 
 import type { CollectionEntry } from 'astro:content';
 import { getLangFromUrl, useTranslations } from "@/i18n/utils"
@@ -16,14 +11,6 @@ type Props = {
 
 const { name, label, image, location, profiles, phone, email } = Astro.props.basics
 const { city, region } = location
-
-const SOCIAL_ICONS: SocialIcon = {
-  GitHub,
-  LinkedIn,
-  X,
-  Mail,
-  Phone
-}
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -54,6 +41,7 @@ const links = [
       {
         links.map(({ href, title, icon }) => {
           const Icon = SOCIAL_ICONS[icon];
+          if (!Icon) throw `Icon '${icon}.astro' not found in ./src/icons`
 
           return (
             <a
@@ -63,7 +51,7 @@ const links = [
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon width={16} />
+              <Icon.default width={16} />
             </a>
           )
         })
